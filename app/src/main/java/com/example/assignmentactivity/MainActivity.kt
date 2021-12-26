@@ -2,9 +2,11 @@ package com.example.assignmentactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
+import com.example.assignmentactivity.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,10 +25,12 @@ class MainActivity : AppCompatActivity() {
     )
 
     //Variables for gridView
-
     lateinit var recyclerView: RecyclerView
     lateinit var gridAdapter: GridAdapter
     var dataList = mutableListOf<GridData>()
+
+    //code for imageContent
+    lateinit var imageClick:ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,6 +72,7 @@ class MainActivity : AppCompatActivity() {
         dataList.add(GridData(R.drawable.waitinghall))
         dataList.add(GridData(R.drawable.washing))
         gridAdapter.setDataList(dataList)
+
     }
 }
 

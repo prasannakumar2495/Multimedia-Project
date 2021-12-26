@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:orientation="vertical"
     tools:context=".MainActivity"
     >
@@ -22,6 +23,7 @@
             android:layout_gravity="center"
             android:text="@string/movies"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textStyle="italic"
             />
 
@@ -52,6 +54,7 @@
             android:layout_gravity="center"
             android:text="@string/now_showing"
             android:textAlignment="center"
+            android:textColor="@color/white"
             android:textStyle="italic"
             />
 

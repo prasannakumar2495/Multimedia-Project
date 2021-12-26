@@ -21,8 +21,6 @@ class GridAdapter(var context: Context) : RecyclerView.Adapter<GridAdapter.ViewH
         init {
             image=itemView.findViewById(R.id.image)
         }
-
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GridAdapter.ViewHolder {
