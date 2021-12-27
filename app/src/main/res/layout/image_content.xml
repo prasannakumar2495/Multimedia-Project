@@ -24,7 +24,7 @@
             android:layout_height="300dp"
             android:layout_margin="5dp"
             android:contentDescription="@string/mutlipleimages"
-            app:srcCompat="@drawable/cold"
+            app:srcCompat="@drawable/_1"
             tools:ignore="ImageContrastCheck"
             />
     </androidx.cardview.widget.CardView>

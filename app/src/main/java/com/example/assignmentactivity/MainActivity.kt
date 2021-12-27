@@ -14,14 +14,14 @@ class MainActivity : AppCompatActivity() {
     lateinit var myAdapter: ViewAdaptor
 
     var images = intArrayOf(
-        R.drawable.cold,
-        R.drawable.covid,
-        R.drawable.curequickly,
-        R.drawable.mask,
-        R.drawable.st,
-        R.drawable.stay,
-        R.drawable.waitinghall,
-        R.drawable.washing
+        R.drawable._1,
+        R.drawable._2,
+        R.drawable._3,
+        R.drawable._4,
+        R.drawable._5,
+        R.drawable._6,
+        R.drawable._7,
+        R.drawable._8
     )
 
     //Variables for gridView
@@ -47,30 +47,30 @@ class MainActivity : AppCompatActivity() {
         gridAdapter = GridAdapter(applicationContext)
         recyclerView.adapter = gridAdapter
 
-        dataList.add(GridData(R.drawable.cold))
-        dataList.add(GridData(R.drawable.covid))
-        dataList.add(GridData(R.drawable.curequickly))
-        dataList.add(GridData(R.drawable.mask))
-        dataList.add(GridData(R.drawable.waitinghall))
-        dataList.add(GridData(R.drawable.washing))
-        dataList.add(GridData(R.drawable.cold))
-        dataList.add(GridData(R.drawable.covid))
-        dataList.add(GridData(R.drawable.curequickly))
-        dataList.add(GridData(R.drawable.mask))
-        dataList.add(GridData(R.drawable.waitinghall))
-        dataList.add(GridData(R.drawable.washing))
-        dataList.add(GridData(R.drawable.cold))
-        dataList.add(GridData(R.drawable.covid))
-        dataList.add(GridData(R.drawable.curequickly))
-        dataList.add(GridData(R.drawable.mask))
-        dataList.add(GridData(R.drawable.waitinghall))
-        dataList.add(GridData(R.drawable.washing))
-        dataList.add(GridData(R.drawable.cold))
-        dataList.add(GridData(R.drawable.covid))
-        dataList.add(GridData(R.drawable.curequickly))
-        dataList.add(GridData(R.drawable.mask))
-        dataList.add(GridData(R.drawable.waitinghall))
-        dataList.add(GridData(R.drawable.washing))
+        dataList.add(GridData(R.drawable._1))
+        dataList.add(GridData(R.drawable._2))
+        dataList.add(GridData(R.drawable._3))
+        dataList.add(GridData(R.drawable._4))
+        dataList.add(GridData(R.drawable._5))
+        dataList.add(GridData(R.drawable._6))
+        dataList.add(GridData(R.drawable._7))
+        dataList.add(GridData(R.drawable._8))
+        dataList.add(GridData(R.drawable._1))
+        dataList.add(GridData(R.drawable._2))
+        dataList.add(GridData(R.drawable._3))
+        dataList.add(GridData(R.drawable._4))
+        dataList.add(GridData(R.drawable._5))
+        dataList.add(GridData(R.drawable._6))
+        dataList.add(GridData(R.drawable._7))
+        dataList.add(GridData(R.drawable._8))
+        dataList.add(GridData(R.drawable._1))
+        dataList.add(GridData(R.drawable._2))
+        dataList.add(GridData(R.drawable._3))
+        dataList.add(GridData(R.drawable._4))
+        dataList.add(GridData(R.drawable._5))
+        dataList.add(GridData(R.drawable._6))
+        dataList.add(GridData(R.drawable._7))
+        dataList.add(GridData(R.drawable._8))
         gridAdapter.setDataList(dataList)
 
     }
