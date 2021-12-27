@@ -21,7 +21,14 @@ class MainActivity : AppCompatActivity() {
         R.drawable._5,
         R.drawable._6,
         R.drawable._7,
-        R.drawable._8
+        R.drawable._8,
+        R.drawable._9,
+        R.drawable._10,
+        R.drawable._11,
+        R.drawable._12,
+        R.drawable._13,
+        R.drawable._14,
+        R.drawable._15,
     )
 
     //Variables for gridView
