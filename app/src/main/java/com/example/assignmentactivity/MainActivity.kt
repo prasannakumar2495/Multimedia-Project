@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewPager: ViewPager
     lateinit var myAdapter: ViewAdaptor
 
-    var images = intArrayOf(
+    private var images = intArrayOf(
         R.drawable._1,
         R.drawable._2,
         R.drawable._3,
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     var dataList = mutableListOf<GridData>()
 
     //code for imageContent
-    lateinit var imageClick:ImageView
+    lateinit var imageClick: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,31 +47,19 @@ class MainActivity : AppCompatActivity() {
         gridAdapter = GridAdapter(applicationContext)
         recyclerView.adapter = gridAdapter
 
-        dataList.add(GridData(R.drawable._1))
-        dataList.add(GridData(R.drawable._2))
-        dataList.add(GridData(R.drawable._3))
-        dataList.add(GridData(R.drawable._4))
-        dataList.add(GridData(R.drawable._5))
-        dataList.add(GridData(R.drawable._6))
-        dataList.add(GridData(R.drawable._7))
-        dataList.add(GridData(R.drawable._8))
-        dataList.add(GridData(R.drawable._1))
-        dataList.add(GridData(R.drawable._2))
-        dataList.add(GridData(R.drawable._3))
-        dataList.add(GridData(R.drawable._4))
-        dataList.add(GridData(R.drawable._5))
-        dataList.add(GridData(R.drawable._6))
-        dataList.add(GridData(R.drawable._7))
-        dataList.add(GridData(R.drawable._8))
-        dataList.add(GridData(R.drawable._1))
-        dataList.add(GridData(R.drawable._2))
-        dataList.add(GridData(R.drawable._3))
-        dataList.add(GridData(R.drawable._4))
-        dataList.add(GridData(R.drawable._5))
-        dataList.add(GridData(R.drawable._6))
-        dataList.add(GridData(R.drawable._7))
-        dataList.add(GridData(R.drawable._8))
+        //Adding image path to GridData class
+        addGridData(images)
+
         gridAdapter.setDataList(dataList)
+
+    }
+
+    private fun addGridData(dataImage: IntArray) {
+        for (j in 1..3) {
+            for (i in 0..dataImage.lastIndex) {
+                dataList.add(GridData(dataImage[i]))
+            }
+        }
 
     }
 }
