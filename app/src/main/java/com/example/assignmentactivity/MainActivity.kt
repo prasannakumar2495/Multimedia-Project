@@ -29,9 +29,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var gridAdapter: GridAdapter
     var dataList = mutableListOf<GridData>()
 
-    //code for imageContent
-    lateinit var imageClick: ImageView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
