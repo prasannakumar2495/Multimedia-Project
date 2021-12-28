@@ -1,4 +1,4 @@
-package com.example.assignmentactivity
+package com.example.assignmentactivity.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.viewpager.widget.PagerAdapter
+import com.example.assignmentactivity.R
 
 class ViewAdaptor(var context: Context, var image: IntArray): PagerAdapter() {
     lateinit var layoutInflater: LayoutInflater

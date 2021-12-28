@@ -1,13 +1,13 @@
-package com.example.assignmentactivity
+package com.example.assignmentactivity.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.grid_item_view.view.*
+import com.example.assignmentactivity.R
+import com.example.assignmentactivity.models.GridData
 
 class GridAdapter(var context: Context) : RecyclerView.Adapter<GridAdapter.ViewHolder>() {
 
@@ -23,13 +23,14 @@ class GridAdapter(var context: Context) : RecyclerView.Adapter<GridAdapter.ViewH
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GridAdapter.ViewHolder {
-       var  view = LayoutInflater.from(parent.context).inflate(R.layout.grid_item_view, parent,
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+       var  view = LayoutInflater.from(parent.context).inflate(
+           R.layout.grid_item_view, parent,
                false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: GridAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       var data=dataList[position]
         holder.image.setImageResource(data.image)
     }
