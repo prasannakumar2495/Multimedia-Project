@@ -17,24 +17,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewPager: ViewPager
     lateinit var myAdapter: ViewAdaptor
 
-   /* private var images = intArrayOf(
-        R.drawable._1,
-        R.drawable._2,
-        R.drawable._3,
-        R.drawable._4,
-        R.drawable._5,
-        R.drawable._6,
-        R.drawable._7,
-        R.drawable._8,
-        R.drawable._9,
-        R.drawable._10,
-        R.drawable._11,
-        R.drawable._12,
-        R.drawable._13,
-        R.drawable._14,
-        R.drawable._15,
-    ) */
-    val imageData = ImagesList()
+
+    var imageData = ImagesList()
+
     //Variables for gridView
     lateinit var recyclerView: RecyclerView
     lateinit var gridAdapter: GridAdapter
@@ -45,7 +30,6 @@ class MainActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 
-            var imageData= ImagesList()
             //code for image swiping
             viewPager = findViewById<ViewPager>(R.id.viewPager)
             myAdapter = ViewAdaptor(this, imageData.images)
@@ -61,12 +45,9 @@ class MainActivity : AppCompatActivity() {
             addGridData(imageData.images)
 
             gridAdapter.setDataList(dataList)
-        }
-        finally {
+        } finally {
             Log.ERROR
         }
-
-
     }
 
     private fun addGridData(dataImage: IntArray) {
