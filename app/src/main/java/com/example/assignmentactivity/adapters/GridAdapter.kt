@@ -17,10 +17,13 @@ class GridAdapter(var context: Context) : RecyclerView.Adapter<GridAdapter.ViewH
         this.dataList=dataList
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+         var image:ImageView = itemView.findViewById(R.id.image)
+        /*
          var image:ImageView
         init {
             image=itemView.findViewById(R.id.image)
         }
+         */
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
