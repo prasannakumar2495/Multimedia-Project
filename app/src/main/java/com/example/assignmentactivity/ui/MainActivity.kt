@@ -14,9 +14,9 @@ import android.util.Log
 
 class MainActivity : AppCompatActivity() {
 
+    //Variables for image swiping
     lateinit var viewPager: ViewPager
     lateinit var myAdapter: ViewAdaptor
-
 
     var imageData = ImagesList()
 
@@ -46,12 +46,12 @@ class MainActivity : AppCompatActivity() {
 
             gridAdapter.setDataList(dataList)
         } finally {
-            Log.ERROR
+            Log.d("lifeCycle","onCreate Invoked")
         }
     }
 
     private fun addGridData(dataImage: IntArray) {
-        for (j in 1..3) {
+        for (j in 1..10) {
             for (i in 0..dataImage.lastIndex) {
                 dataList.add(GridData(dataImage[i]))
             }
