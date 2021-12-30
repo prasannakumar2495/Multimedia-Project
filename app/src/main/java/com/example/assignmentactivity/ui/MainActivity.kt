@@ -11,8 +11,13 @@ import com.example.assignmentactivity.adapters.ViewAdaptor
 import com.example.assignmentactivity.models.GridData
 import com.example.assignmentactivity.models.ImagesList
 import android.util.Log
+import android.view.View
+import android.widget.Toast
+import kotlinx.android.synthetic.main.grid_item_view.*
 
-class MainActivity : AppCompatActivity() {
+/*we have extended to OnClickListener, so that there is no need to implement
+OnClickListener for each image. */
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     //Variables for image swiping
     lateinit var viewPager: ViewPager
@@ -27,6 +32,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         try {
+
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
 
@@ -45,8 +51,14 @@ class MainActivity : AppCompatActivity() {
             addGridData(imageData.images)
 
             gridAdapter.setDataList(dataList)
+
+//            //registering our views to receive onclicklistener events
+//            var gImage = gridImage
+//            gImage.setOnClickListener(this)
         } finally {
-            Log.d("lifeCycle","onCreate Invoked")
+            /* val (n,m)= 1 to 10
+             Log.d("lifeCycle","$n $m")*/
+            Log.d("lifeCycle", "rest")
         }
     }
 
@@ -57,6 +69,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onClick(p0: View?) {
+        when (p0!!.id) {
+            gridImage.id -> {
+                Toast.makeText(this,
+                    "Image has been clicked", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }
 
